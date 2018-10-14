@@ -1,0 +1,101 @@
+/*---------------GENERAL STYLES--------------*/
+.helper-padding{
+  margin-top: 70px;
+}
+a{
+  outline: none;
+  color: black;
+}
+li{
+  list-style: none;
+}
+/*----------------LANDING PAGE---------------*/
+/*--NAV MENU--*/
+.favicon{
+  width: 16px;
+  height: 16px;
+}
+.fixed-header div.clearfix{
+  margin-right: 20px;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+.fixed-header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  background: rgb(255, 255, 255);
+}
+
+.fixed-header div{
+  float: left;
+  background: #162661;
+  width: 2em;
+  height: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 1em;
+}
+
+.main-nav ul, .main-nav {
+  float: left;
+}
+.main-nav {
+  float: right;
+}
+
+.main-nav ul, .sitename{
+  margin: 20px auto 0 auto;
+}
+
+.main-nav ul li{
+  font-size: 12pt;
+  margin: 5px;
+  display: inline-block;
+  color: grey;
+  text-transform: capitalize;
+}
+.main-nav ul:last-child{
+  padding-right: 100px;
+}
+.main-nav ul:first-child{
+  padding-left: 20px;
+}
+.main-nav ul li:hover{
+  color: #162661;
+  cursor: pointer;
+  border-bottom: 2px solid #162661;
+}
+
+#slider{
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+.display-block{
+  background: rgb(117, 141, 161);
+  height: 700px;
+}
+
+.block-container{
+  z-index: 1;
+  padding-top: 800px;
+}
+
+.sitename{
+  float: left;
+  color: #162661;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+/*---------------SLIDER----------------*/
+
+
+
