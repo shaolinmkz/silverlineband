@@ -100,7 +100,6 @@ li{
 }
 
 .display-block{
-  background: rgb(255, 255, 255);
   height: 700px;
   padding: 1em;
 }
@@ -195,6 +194,18 @@ footer{
   }
 }
 
+@media(max-width: 768px){
+  .display-block  {
+    background-size: cover;
+    background-position-x: -100px;
+  }
+}
+
+@media(max-width: 480px){
+  .sitename {
+    display: none;
+  }
+}
 
 
 
