@@ -4,6 +4,7 @@
 }
 a{
   outline: none;
+  text-decoration: none;
   color: black;
 }
 li{
@@ -30,7 +31,9 @@ li{
   display: block;
   background: rgb(255, 255, 255);
 }
-
+.burger-nav{
+  display: none;
+}
 .fixed-header div{
   float: left;
   background: #162661;
@@ -50,7 +53,7 @@ li{
 }
 
 .main-nav ul, .sitename{
-  margin: 20px auto 0 auto;
+  margin: 25px auto 0 auto;
 }
 
 .main-nav ul li{
@@ -61,7 +64,7 @@ li{
   text-transform: capitalize;
 }
 .main-nav ul:last-child{
-  padding-right: 100px;
+  padding-right: 50px;
 }
 .main-nav ul:first-child{
   padding-left: 20px;
@@ -79,14 +82,21 @@ li{
 }
 
 .display-block{
-  background: rgb(117, 141, 161);
+  background: rgb(76, 138, 209);
   height: 700px;
 }
 
 .block-container{
   z-index: 1;
-  padding-top: 800px;
+  padding-top: 55%;
 }
+
+/* #slider-container{
+  width: 100%;
+  background: url("../images/ndubisi-kanu-park/test(1).png");
+  height: 1000px;
+  background-size: cover;
+} */
 
 .sitename{
   float: left;
@@ -94,8 +104,29 @@ li{
   text-transform: uppercase;
   font-weight: bolder;
 }
+/*--------------BLOCK 2--------------*/
+.block2{
+  background-size: contain;
+}
 
-/*---------------SLIDER----------------*/
-
-
-
+footer{
+  background: grey;
+}
+@media(max-width: 1000px){
+  .fixed-header .main-nav{
+    display: none;
+  }
+  .fixed-header .burger-nav{
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  right: 0;
+  top: 70px;
+  padding-bottom: 5em;
+  }
+.fixed-header .burger-nav li:first-child{
+  width: 1em;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+}
