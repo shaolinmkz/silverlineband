@@ -123,13 +123,20 @@ li{
   background-size: cover;
 }
 .block3 {
-  background-size: contain;
+  background: url("../images/mace.jpg");
+  background-size: cover;
+}
+.font-size{
+  font-size: 40%;
+  color: rgb(173, 211, 255);
 }
 .block4 {
-  background-size: contain;
+  background: url("../images/brand.png");
+  background-size: cover;
 }
 .block5 {
-  background-size: contain;
+  background: url("../images/brag.png");
+  background-size: cover;
 }
 .block-text{
   font-size: 200%;
