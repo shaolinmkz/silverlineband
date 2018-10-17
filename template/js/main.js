@@ -1,24 +1,59 @@
 const menuIcon = document.getElementById("menu-icon");
 const closeBtn = document.getElementById("close");
+const previous = document.getElementById("previous");
+const next = document.getElementById("next");
+const slider = document.getElementById("slider");
+
+const timerValue = 5000;
 const totalNum = 17;
+const lowestNum = 1;
 let imageNum = 1;
 let bool = false;
 
+/**
+ * Changes slide every 5 seconds
+ */
 const carousel = () => {
-  const slider = document.getElementById("slider");
   slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
 
   imageNum++;
 
   if (imageNum === totalNum) {
-    imageNum = 1;
+    imageNum = lowestNum;
   }
 }
+setInterval(carousel, timerValue);
 
-setInterval(carousel, 4000);
+/**
+ * Changes slide to next display
+ */
+const nextSlide = () => {
+  imageNum += 1;
+  if (imageNum > totalNum) {
+    imageNum = lowestNum;
+  }
+  slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
+}
+next.addEventListener("click", nextSlide);
 
-const openMenu = (e) => {
-  if (e.target.id === "menu-icon"){
+/**
+ * Changes slide to previous display
+ */
+const previousSlide = () => {
+  imageNum -= 1;
+  if (imageNum < lowestNum) {
+    imageNum = totalNum;
+  }
+  slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
+}
+previous.addEventListener("click", previousSlide);
+
+/**
+ * Opens the hamburger menu on a smaller screen size
+ * @param {object} e - Event parameter
+ */
+const openMenu = () => {
+  if (bool === false){
     const navMenu = document.getElementById("burger-nav");
     navMenu.style.right = "-10000em";
     navMenu.style.transitionDuration = "0.2s";
@@ -31,8 +66,12 @@ const openMenu = (e) => {
 
 menuIcon.addEventListener("click", openMenu);
 
+/**
+ * Closes the hamburger menu on a smaller screen size
+ * @param {object} e - Event parameter
+ */
 const closeMenu = (e) => {
-  if (e.target.id !== "menu-icon" && bool === true) {
+  if (bool === true) {
     const menu = document.getElementById("burger-nav");
     menu.style.right = "0px";
     menu.style.transitionDuration = "0.2s";
@@ -40,13 +79,19 @@ const closeMenu = (e) => {
     menu.style.transitionProperty = "right";
     menu.style.right = "-10000em";
     bool = false;
-  } else if (e.target.tagName === "nav") {
-    openMenu();
   }
-
 }
 
 closeBtn.addEventListener("click", closeMenu);
-window.addEventListener("click", closeMenu);
+
+/**
+ * Close humburger menu list
+ */
+window.addEventListener("click", (e) => {
+  if (e.target.className === "block-container" || e.target.id === "slider-container" || e.target.className === "displaybg" || e.target.id === "footer" || e.target.className === "social-media-container") {
+    closeMenu();
+  }
+});
+
 
 
