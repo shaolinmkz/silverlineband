@@ -11,40 +11,49 @@ let imageNum = 1;
 let bool = false;
 
 /**
+ * sets image src attribute
+ * @param {number} imageNum - Image index number
+ */
+const setImageAttribute = (imageNum) =>{
+  slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
+}
+
+/**
  * Changes slide every 5 seconds
+ * @function {carousel}
  */
 const carousel = () => {
-  slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
-
-  imageNum++;
-
-  if (imageNum === totalNum) {
+  if (imageNum > totalNum) {
     imageNum = lowestNum;
   }
+  setImageAttribute(imageNum);
+  imageNum++;
 }
 setInterval(carousel, timerValue);
 
 /**
  * Changes slide to next display
+ * @function {nextSlide}
  */
 const nextSlide = () => {
-  imageNum += 1;
+  imageNum = imageNum + 1;
   if (imageNum > totalNum) {
     imageNum = lowestNum;
   }
-  slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
+  setImageAttribute(imageNum);
 }
 next.addEventListener("click", nextSlide);
 
 /**
  * Changes slide to previous display
+ * @function {previousSlide}
  */
 const previousSlide = () => {
-  imageNum -= 1;
+  imageNum = imageNum - 1;
   if (imageNum < lowestNum) {
     imageNum = totalNum;
   }
-  slider.setAttribute("src", `../images/ndubisi-kanu-park/test(${imageNum}).png`);
+  setImageAttribute(imageNum);
 }
 previous.addEventListener("click", previousSlide);
 
@@ -69,6 +78,7 @@ menuIcon.addEventListener("click", openMenu);
 /**
  * Closes the hamburger menu on a smaller screen size
  * @param {object} e - Event parameter
+ * @function {closeMenu}
  */
 const closeMenu = (e) => {
   if (bool === true) {
@@ -86,6 +96,7 @@ closeBtn.addEventListener("click", closeMenu);
 
 /**
  * Close humburger menu list
+ * @function {Anonymous}
  */
 window.addEventListener("click", (e) => {
   if (e.target.className === "block-container" || e.target.id === "slider-container" || e.target.className === "displaybg" || e.target.id === "footer" || e.target.className === "social-media-container") {

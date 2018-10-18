@@ -3,7 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .helper-padding{
-  margin-top: 60px;
+  margin-top: 700px;
 }
 a{
   outline: none;
@@ -104,18 +104,19 @@ li{
 }
 #slider-container{
   position: relative;
+   z-index: -3;
 }
-
 #slider{
   position: fixed;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
+  margin-top: -55%;
 }
 #previous, #next {
   position: fixed;
   display: inline-block;
   width: 8%;
-  margin-top: 20%;
+  margin-top: -30%;
   cursor: pointer;
 }
 #previous:active, #next:active{
@@ -127,21 +128,15 @@ li{
 #next{
   right: 0.5em;
 }
-
 .display-block{
   position: relative;
   width: 100%;
   margin-top: -10px;
 }
-#footer{
-  margin-top: -10px;
-  padding-bottom: 10px;
-}
 .block-container{
-  z-index: 1;
-  padding-top: 55%;
+  z-index: 2;
+  margin-top: 55%; /* PADDING */
 }
-
 .sitename{
   float: left;
   color: #162661;
@@ -182,20 +177,66 @@ li{
   color: #18191e;
 }
 /*--------------FOOTER--------------*/
-footer{
-  background: rgb(46, 46, 46);
+#footer{
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+#footer{
+  background: #181818;
   width: 95%;
   padding: 2.5%;
+  z-index: 1;
+}
+#footer .logo-footer{
+  width: 6em;
+  height: 6em;
+  margin: 0 auto;
 }
 .social-media{
-  width: 5%;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+.sb-footer{
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }
 .social-media-container{
   width: 100%;
 }
-/*--------------MEDIA QUERIES--------------*/
+.quick-links{
+  display: block;
+  width: 300px;
+}
 
+.quick-links li{
+  display: inline-block;
+  margin: 2%;
+}
+.quick-links li a{
+  color: white;
+  text-align: center;
+}
+.quick-links label{
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+
+/*--------------MEDIA QUERIES--------------*/
+@media(max-width: 1300px){
+  .helper-padding{
+  margin-top: 600px;
+}
+}
 @media(max-width: 1000px){
+  .helper-padding{
+  margin-top: 500px;
+}
   .menu-icon{
     display: inline-block;
   }
@@ -251,6 +292,9 @@ footer{
 }
 
 @media(max-width: 768px){
+  .helper-padding{
+  margin-top: 350px;
+}
   .block-text{
   font-size: 100%;
 }
@@ -268,6 +312,9 @@ footer{
 }
 
 @media(max-width: 480px){
+  .helper-padding{
+  margin-top: 300px;
+}
   .sitename {
     display: none;
   }
@@ -281,15 +328,14 @@ footer{
     font-weight: bolder;
     margin: 15px auto 0 auto ;
   }
-    /* .block-text{
-  font-size: 50%;
-  width: 60%;
-  margin: 1em auto 0 auto;
+    .block-text{
+  font-size: 100%;
 }
-.display-block{
-  height: 150px;
-  padding: 0.1em;
-} */
+@media(max-width: 320px){
+  .helper-padding{
+  margin-top: 250px;
+}
+}
 }
 
 
