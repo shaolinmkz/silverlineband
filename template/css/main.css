@@ -115,12 +115,12 @@ li{
 #previous, #next {
   position: fixed;
   display: inline-block;
-  width: 8%;
+  width: 5%;
   margin-top: -30%;
   cursor: pointer;
 }
 #previous:active, #next:active{
-  width: 7.7%;
+  width: 4.7%;
 }
 #previous{
   left: 0.5em;
@@ -144,10 +144,9 @@ li{
   font-weight: bolder;
   font-size: 1.5em;
 }
-.sitenameTwo{
+.sitenameTwo {
   display: none;
 }
-
 /*--------------BLOCKS--------------*/
 .displaybg{
   width: 100%;
@@ -183,56 +182,75 @@ li{
 }
 #footer{
   background: #181818;
-  width: 95%;
-  padding: 2.5%;
+  width: 96%;
+  padding: 2%;
   z-index: 1;
 }
-#footer .logo-footer{
-  width: 6em;
-  height: 6em;
-  margin: 0 auto;
-}
-.social-media{
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-}
-.sb-footer{
-  color: white;
-  font-size: 1em;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-}
-.social-media-container{
-  width: 100%;
-}
-.quick-links{
-  display: block;
-  width: 300px;
-}
-
-.quick-links li{
-  display: inline-block;
-  margin: 2%;
-}
-.quick-links li a{
-  color: white;
-  text-align: center;
-}
-.quick-links label{
-  color: white;
-  display: block;
-  text-align: center;
-}
-
+  #footer img.logo-footer{
+    width: 3em;
+    height: 3em;
+  }
+  .logo-footer-container{
+    text-align: center;
+  }
+  .social-media{
+    width: 30px;
+    height: 30px;
+    margin: 2% 1%;
+  }
+  .social-media:hover{
+    width: 28px;
+    height: 28px;
+  }
+  .sb-footer{
+    color: white;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+  }
+  .social-media-container{
+    width: 100%;
+    text-align: center;
+  }
+  .quick-links-container{
+    text-align: center;
+  }
+  .quick-links li{
+    display: inline-block;
+    margin: 0 5%;
+  }
+  .quick-links li a{
+    text-align: center;
+  }
+  .quick-links label{
+    color: white;
+    display: block;
+    text-align: center;
+  }
+  .terms{
+    color: rgb(167, 166, 166);
+    display: inline-table;
+    padding: 0.5em 0 0 0;
+  }
+  .terms:hover{
+    color: white;
+  }
+  .centerElement{
+    text-align: center;
+  }
+  .sb{
+    display: none;
+  }
 
 /*--------------MEDIA QUERIES--------------*/
 @media(max-width: 1300px){
   .helper-padding{
-  margin-top: 600px;
+    margin-top: 600px;
+  }
 }
-}
+
 @media(max-width: 1000px){
   .helper-padding{
   margin-top: 500px;
@@ -289,6 +307,68 @@ li{
 .block-text{
   font-size: 120%;
 }
+
+  /*---FOOTER---*/
+  #footer img.logo-footer{
+    width: 5em;
+    height: 5em;
+  }
+  .logo-footer-container{
+    text-align: center;
+  }
+  .social-media{
+    width: 30px;
+    height: 30px;
+    margin: 2% 1%;
+  }
+  .social-media:hover{
+    width: 28px;
+    height: 28px;
+  }
+  .sb-footer{
+    color: white;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+  }
+  .social-media-container{
+    width: 100%;
+    text-align: center;
+  }
+  .quick-links-container{
+    text-align: center;
+  }
+  .quick-links li{
+    display: inline-block;
+    margin: 0 5%;
+  }
+  .quick-links li a{
+    text-align: center;
+  }
+  .quick-links label{
+    color: white;
+    display: block;
+    text-align: center;
+  }
+  .terms{
+    color: rgb(167, 166, 166);
+    display: inline-table;
+    padding: 0.5em 0 0 0;
+  }
+  .terms:hover{
+    color: white;
+  }
+  .centerElement{
+    text-align: center;
+  }
+  .sb{
+    display: block;
+  }
+  .followus{
+    display: none;
+  }
 }
 
 @media(max-width: 768px){

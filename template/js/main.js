@@ -59,7 +59,7 @@ previous.addEventListener("click", previousSlide);
 
 /**
  * Opens the hamburger menu on a smaller screen size
- * @param {object} e - Event parameter
+ * @function {openMenu}
  */
 const openMenu = () => {
   if (bool === false){
@@ -77,10 +77,9 @@ menuIcon.addEventListener("click", openMenu);
 
 /**
  * Closes the hamburger menu on a smaller screen size
- * @param {object} e - Event parameter
  * @function {closeMenu}
  */
-const closeMenu = (e) => {
+const closeMenu = () => {
   if (bool === true) {
     const menu = document.getElementById("burger-nav");
     menu.style.right = "0px";
@@ -96,6 +95,7 @@ closeBtn.addEventListener("click", closeMenu);
 
 /**
  * Close humburger menu list
+ * @param {object} e - Event parameter
  * @function {Anonymous}
  */
 window.addEventListener("click", (e) => {
